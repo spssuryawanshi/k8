@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: example-resource-quota
+  namespace: private
+spec:
+  hard:
+    pods: "10"  # Maximum number of pods
+    requests.cpu: "1.5"  # Total amount of CPU requested
+    requests.memory: 4Gi  # Total amount of memory requested
+    limits.cpu: "1"  # Total amount of CPU limit
+    limits.memory: 6Gi  # Total amount of memory limit
+
+
